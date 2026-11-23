@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karlsruher Freaks – Multigaming-Community seit 2001</title>
+<meta name="description" content="Karlsruher Freaks: Multigaming-Community und Gaming-Clan aus Karlsruhe, online seit 2001. Call of Duty, Battlefield 6, World of Warcraft, GTA 6 und Mobile Games auf PC, PS5 und Xbox. Jetzt dem Discord beitreten.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://karlsruher-freaks.de/">
+<meta name="theme-color" content="#14131f">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="Karlsruher Freaks">
+<meta property="og:title" content="Karlsruher Freaks – Multigaming-Community seit 2001">
+<meta property="og:description" content="Ein Clan, alle Spiele, jede Plattform. Gaming-Community aus Karlsruhe mit eigenem Discord-Server.">
+<meta property="og:url" content="https://karlsruher-freaks.de/">
+<meta property="og:image" content="https://karlsruher-freaks.de/banner.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="823">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314131f'/%3E%3Cg stroke='%23f6c21c' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M16 14 6 27M16 14l-5 14M16 14v15M16 14l5 14M16 14l10 13'/%3E%3C/g%3E%3Ccircle cx='16' cy='13' r='4' fill='%23e5483a'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="banner.jpg" fetchpriority="high">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://karlsruher-freaks.de/#org","name":"Karlsruher Freaks","alternateName":"Karlsruher Freaks Multigaming","url":"https://karlsruher-freaks.de/","foundingDate":"2001","description":"Multigaming-Community und Gaming-Clan aus Karlsruhe, online seit 2001.","image":"https://karlsruher-freaks.de/banner.jpg","areaServed":"DE","address":{"@type":"PostalAddress","addressLocality":"Karlsruhe","addressRegion":"Baden-Württemberg","addressCountry":"DE"},"knowsAbout":["Multigaming","Online-Gaming","Call of Duty","Battlefield 6","World of Warcraft","GTA 6","Mobile Games"]},
+ {"@type":"WebSite","@id":"https://karlsruher-freaks.de/#website","url":"https://karlsruher-freaks.de/","name":"Karlsruher Freaks","inLanguage":"de-DE","publisher":{"@id":"https://karlsruher-freaks.de/#org"}}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout-Idee: Nachtkarte von Karlsruhe. Der Fächer (32 Strahlen vom Schlossturm)
+   ist das eine laute Element im Hero, alles andere bleibt ruhig und kantig. */
+:root {
+  color-scheme: dark;
+  --night: #14131f;        /* Grund */
+  --night-2: #1c1b2b;      /* Flächen */
+  --night-3: #27253a;      /* Linien, Ränder */
+  --paper: #f1eee6;        /* Text */
+  --muted: #a39fb5;        /* Nebentext */
+  --baden: #f6c21c;        /* Akzent: badisches Gelb */
+  --red: #e5483a;          /* Zweitakzent: badisches Rot */
+  --blurple: #5865f2;      /* Discord */
+  --ok: #3fcf8e;
+  --display: "Bricolage Grotesque", "Arial Narrow", Arial, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --wrap: 1120px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--night); color: var(--paper);
+  font-family: var(--body); font-size: 17px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+img, svg { max-width: 100%; }
+:focus-visible { outline: 2px solid var(--baden); outline-offset: 3px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.02; margin: 0; text-wrap: balance; letter-spacing: -0.02em; }
+h2 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; }
+h3 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; }
+p { margin: 0; }
+.eyebrow { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--baden); }
+.lead { color: var(--muted); max-width: 58ch; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+  font: 600 1rem var(--body); text-decoration: none; border: 0;
+  padding: 14px 22px; border-radius: 4px; transition: transform .15s, background .15s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--baden); color: #16130a; }
+.btn-discord { background: var(--blurple); color: #fff; }
+.btn-ghost { background: transparent; color: var(--paper); box-shadow: inset 0 0 0 1.5px var(--night-3); }
+.btn-ghost:hover { box-shadow: inset 0 0 0 1.5px var(--paper); }
+.btn svg { width: 20px; height: 20px; flex: none; }
+
+/* Navigation */
+header.nav { position: sticky; top: 0; z-index: 20; background: rgba(20,19,31,.88); backdrop-filter: blur(10px); border-bottom: 1px solid var(--night-3); }
+.nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-weight: 800; font-size: 1.15rem; letter-spacing: -0.01em; }
+.logo svg { width: 30px; height: 30px; }
+.logo small { font-family: var(--mono); font-weight: 400; font-size: .7rem; color: var(--muted); letter-spacing: .1em; }
+.nav nav { display: flex; gap: 26px; }
+.nav nav a { text-decoration: none; color: var(--muted); font-size: .95rem; }
+.nav nav a:hover { color: var(--paper); }
+.nav .btn { padding: 9px 16px; font-size: .92rem; }
+.nav-actions { display: flex; align-items: center; gap: 8px; }
+.menu-btn { display: none; width: 44px; height: 44px; padding: 10px; background: none; border: 0; color: var(--paper); cursor: pointer; border-radius: 4px; }
+.nav .btn { min-height: 44px; }
+@media (max-width: 820px) {
+  .menu-btn { display: block; }
+  .nav nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; gap: 0; background: var(--night); border-bottom: 1px solid var(--night-3); padding: 6px 20px 14px; }
+  .nav nav.open { display: flex; }
+  .nav nav a { padding: 14px 0; font-size: 1.05rem; color: var(--paper); border-bottom: 1px solid var(--night-3); }
+  .nav nav a:last-child { border-bottom: 0; }
+}
+@media (max-width: 480px) { .logo small { display: none; } .logo { font-size: 1.05rem; } .nav .wrap { gap: 8px; } }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--night-3); }
+.hero .wrap { display: grid; grid-template-columns: 1.15fr 1fr; gap: 32px; align-items: center; padding-top: 64px; padding-bottom: 72px; }
+.hero h1 { font-size: clamp(2.2rem, 7.4vw, 5.2rem); font-weight: 800; line-height: .92; margin: 18px 0 22px; }
+.hero h1 em { font-style: normal; color: var(--baden); }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 40px; padding: 0; list-style: none; font-family: var(--mono); font-size: .82rem; color: var(--muted); }
+.facts b { display: block; font-family: var(--display); font-size: 1.7rem; color: var(--paper); letter-spacing: -0.02em; }
+.fan { position: relative; aspect-ratio: 1; max-width: 480px; width: 100%; justify-self: center; }
+.fan svg { width: 100%; height: 100%; display: block; }
+.fan .sweep { transform-origin: 200px 200px; animation: sweep 9s linear infinite; }
+@keyframes sweep { to { transform: rotate(360deg); } }
+.fan figcaption { position: absolute; left: 0; bottom: 0; font-family: var(--mono); font-size: .72rem; color: var(--muted); line-height: 1.5; }
+@media (max-width: 860px) {
+  .hero .wrap { grid-template-columns: 1fr; padding-top: 40px; padding-bottom: 48px; }
+  .fan { max-width: 320px; order: -1; justify-self: start; }
+}
+
+/* Banner */
+.banner { position: relative; background: #0b0a12; border-bottom: 1px solid var(--night-3); overflow: hidden; }
+.banner img { display: block; width: 100%; height: clamp(250px, 42.900vw, 620px); object-fit: cover; object-position: 50% 42%; }
+.banner::after { content: ""; position: absolute; inset: auto 0 0 0; height: 55%; background: linear-gradient(transparent, rgba(11,10,18,.9) 78%); pointer-events: none; }
+.banner-title { position: absolute; left: 0; right: 0; bottom: clamp(12px, 3vw, 40px); z-index: 1; text-align: center; padding: 0 16px; }
+.bt-name { font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: -0.02em; line-height: 1; font-size: clamp(1.75rem, 7vw, 6rem); white-space: nowrap; }
+.bt-name span { color: transparent; -webkit-text-stroke: 1.5px var(--paper); }
+.bt-name b { font-weight: 800; background: linear-gradient(#ffe27a, #f6c21c 55%, #e08a12); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(3px 3px 0 #b3261c); }
+.bt-tag { margin-top: clamp(6px, 1.2vw, 14px); font-family: var(--mono); font-size: clamp(.58rem, 1.5vw, .95rem); letter-spacing: .16em; text-transform: uppercase; color: var(--baden); }
+.hero .wrap { grid-template-columns: 1fr; padding-top: 44px; }
+.hero .fan { display: none; }
+
+.game img.art { object-fit: cover; height: auto; }
+
+/* Handy und Tablet */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+section[id], main[id] { scroll-margin-top: 76px; }
+.btn { min-height: 48px; }
+@media (max-width: 1024px) and (min-width: 601px) {
+  .wrap { padding: 0 28px; }
+  section { padding: 68px 0; }
+  .members-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .hero .cta { flex-direction: column; }
+  .hero .cta .btn, .members-cta .btn, .final .btn, .discord .wrap > div > .btn { width: 100%; justify-content: center; }
+  .facts { gap: 16px 22px; margin-top: 30px; }
+  .facts b { font-size: 1.45rem; }
+  .head { margin-bottom: 30px; }
+  .values { margin-top: 40px; }
+  .thennow figcaption { font-size: .7rem; }
+  footer.site .wrap { flex-direction: column; }
+}
+
+/* Plattform-Leiste */
+.platforms { border-bottom: 1px solid var(--night-3); background: var(--night-2); }
+.platforms ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
+.platforms li { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 18px 8px; font-family: var(--display); font-weight: 700; font-size: 1.05rem; border-left: 1px solid var(--night-3); }
+.platforms li:first-child { border-left: 0; }
+.platforms svg { width: 22px; height: 22px; color: var(--baden); flex: none; }
+@media (max-width: 560px) { .platforms ul { grid-template-columns: 1fr 1fr; } .platforms li:nth-child(3) { border-left: 0; } .platforms li:nth-child(n+3) { border-top: 1px solid var(--night-3); } }
+
+/* Spiele */
+.games { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.game { background: var(--night-2); border: 1px solid var(--night-3); border-radius: 6px; padding: 24px 22px; display: grid; gap: 12px; align-content: start; position: relative; overflow: hidden; transition: border-color .15s, transform .15s; }
+.game:hover { border-color: var(--baden); transform: translateY(-3px); }
+.game::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--c, var(--baden)); }
+.game .art { display: block; margin: -24px -22px 6px; width: calc(100% + 44px); max-width: none; aspect-ratio: 2 / 1; border-bottom: 1px solid var(--night-3); }
+.thennow { margin: 0 0 48px; border: 1px solid var(--night-3); border-radius: 6px; overflow: hidden; background: var(--night-2); }
+.thennow svg { display: block; width: 100%; height: auto; }
+.thennow figcaption { padding: 12px 18px; font-family: var(--mono); font-size: .76rem; color: var(--muted); border-top: 1px solid var(--night-3); }
+.game .genre { font-family: var(--mono); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.game h3 { font-size: 1.65rem; font-weight: 800; }
+.game p { color: var(--muted); font-size: .95rem; }
+.pf { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.pf span { font-family: var(--mono); font-size: .72rem; padding: 3px 9px; border: 1px solid var(--night-3); border-radius: 99px; color: var(--paper); }
+.game.open { background: transparent; border-style: dashed; }
+.game.open::before { display: none; }
+.game.open a { color: var(--baden); font-weight: 600; }
+@media (max-width: 900px) { .games { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .games { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .game:hover { transform: none; } }
+
+/* Sections */
+section { padding: 84px 0; border-bottom: 1px solid var(--night-3); }
+.head { display: grid; gap: 14px; margin-bottom: 44px; }
+@media (max-width: 600px) { section { padding: 56px 0; } }
+
+/* Zeitachse */
+.timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 2px solid var(--night-3); }
+.timeline div { padding: 22px 22px 0 0; position: relative; }
+.timeline div::before { content: ""; position: absolute; top: -7px; left: 0; width: 12px; height: 12px; background: var(--night); border: 2px solid var(--baden); border-radius: 50%; }
+.timeline div.now::before { background: var(--baden); }
+.timeline b { font-family: var(--display); font-size: 2.2rem; font-weight: 800; display: block; letter-spacing: -0.02em; }
+.timeline p { color: var(--muted); font-size: .96rem; margin-top: 6px; max-width: 30ch; }
+@media (max-width: 700px) {
+  .timeline { grid-template-columns: 1fr; border-top: 0; border-left: 2px solid var(--night-3); }
+  .timeline div { padding: 0 0 28px 24px; }
+  .timeline div::before { top: 12px; left: -8px; }
+}
+
+/* Werte */
+.values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--night-3); border: 1px solid var(--night-3); margin-top: 56px; }
+.values article { background: var(--night); padding: 28px 24px; display: grid; gap: 10px; align-content: start; }
+.values .num { font-family: var(--mono); font-size: .78rem; color: var(--red); }
+.values p { color: var(--muted); font-size: .96rem; }
+@media (max-width: 800px) { .values { grid-template-columns: 1fr; } }
+
+/* Discord */
+.discord .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.steps { list-style: none; padding: 0; margin: 28px 0 30px; display: grid; gap: 16px; counter-reset: s; }
+.steps li { display: grid; grid-template-columns: 34px 1fr; gap: 14px; counter-increment: s; }
+.steps li::before { content: counter(s); font-family: var(--mono); font-size: .85rem; width: 34px; height: 34px; display: grid; place-items: center; border: 1.5px solid var(--blurple); border-radius: 50%; color: #c9cdfb; }
+.steps span { color: var(--muted); font-size: .96rem; display: block; }
+.widget { background: var(--night-2); border: 1px solid var(--night-3); border-radius: 10px; overflow: hidden; }
+.widget header { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 20px; background: var(--blurple); color: #fff; }
+.widget header strong { font-family: var(--display); font-size: 1.1rem; }
+.widget header span { font-family: var(--mono); font-size: .76rem; }
+.widget .tag { font-family: var(--mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--baden); padding: 12px 20px 0; }
+.widget h4 { margin: 14px 20px 6px; font: 500 .72rem var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.widget ul { list-style: none; margin: 0; padding: 0 12px 8px; }
+.widget li { display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 6px; font-size: .95rem; }
+.widget li:hover { background: var(--night-3); }
+.widget li i { width: 9px; height: 9px; border-radius: 50%; background: var(--ok); flex: none; }
+.widget li em { margin-left: auto; font-style: normal; font-size: .78rem; color: var(--muted); font-family: var(--mono); }
+.widget li.ch { color: var(--muted); }
+.widget li.ch::before { content: "#"; font-family: var(--mono); color: var(--night-3); filter: brightness(2.2); }
+.widget footer { padding: 14px 20px 18px; border-top: 1px solid var(--night-3); }
+.widget footer .btn { width: 100%; justify-content: center; }
+.widget footer small { display: block; margin-top: 10px; color: var(--muted); font-size: .8rem; text-align: center; }
+@media (max-width: 860px) { .discord .wrap { grid-template-columns: 1fr; gap: 36px; } }
+
+/* Mitgliederbereich */
+.members-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.lock { background: var(--night-2); border: 1px solid var(--night-3); border-radius: 6px; padding: 22px 20px 24px; display: grid; gap: 10px; align-content: start; position: relative; }
+.lock svg { width: 22px; height: 22px; color: var(--baden); }
+.lock p { color: var(--muted); font-size: .93rem; }
+.lock .state { font-family: var(--mono); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.members-cta { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+.members-cta small { color: var(--muted); }
+@media (max-width: 900px) { .members-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .members-grid { grid-template-columns: 1fr; } }
+
+/* Abschluss */
+.final { text-align: left; background: var(--baden); color: #16130a; border-bottom: 0; }
+.final h2 { font-size: clamp(2.4rem, 7vw, 4.8rem); }
+.final p { max-width: 52ch; margin: 18px 0 30px; font-weight: 500; }
+.final .btn-primary { background: #16130a; color: var(--baden); }
+footer.site { padding: 36px 0 48px; color: var(--muted); font-size: .88rem; }
+footer.site .wrap { display: flex; flex-wrap: wrap; gap: 14px 28px; justify-content: space-between; }
+footer.site nav { display: flex; gap: 22px; }
+
+/* Login-Dialog */
+.modal { position: fixed; inset: 0; z-index: 50; display: none; place-items: center; padding: 16px; background: rgba(8,8,14,.78); }
+.modal.open { display: grid; }
+.dialog { width: min(430px, 100%); background: var(--night-2); border: 1px solid var(--night-3); border-radius: 10px; padding: 28px 26px 26px; position: relative; max-height: 100%; overflow-y: auto; }
+.dialog h3 { font-size: 1.7rem; margin-bottom: 6px; }
+.dialog > p { color: var(--muted); font-size: .95rem; margin-bottom: 20px; }
+.dialog .btn { width: 100%; justify-content: center; }
+.close { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; background: none; border: 0; color: var(--muted); font-size: 1.5rem; cursor: pointer; border-radius: 4px; }
+.close:hover { color: var(--paper); }
+.or { display: flex; align-items: center; gap: 12px; margin: 20px 0; color: var(--muted); font-family: var(--mono); font-size: .75rem; }
+.or::before, .or::after { content: ""; flex: 1; height: 1px; background: var(--night-3); }
+.field { display: grid; gap: 6px; margin-bottom: 14px; }
+.field label { font-size: .85rem; color: var(--muted); }
+.field input { font: inherit; color: var(--paper); background: var(--night); border: 1.5px solid var(--night-3); border-radius: 4px; padding: 12px 14px; width: 100%; }
+.field input:focus { border-color: var(--baden); outline: none; }
+.notice { display: none; margin-top: 16px; padding: 12px 14px; border-left: 3px solid var(--baden); background: var(--night); font-size: .9rem; color: var(--paper); }
+.notice.show { display: block; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fan .sweep { animation: none; }
+  .btn:hover { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Karlsruher Freaks, Startseite">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="15" fill="none" stroke="#f6c21c" stroke-width="1.5"/><g stroke="#f6c21c" stroke-width="1.5" stroke-linecap="round"><path d="M16 16 6 27M16 16l-5 13M16 16v14M16 16l5 13M16 16l10 11"/></g><circle cx="16" cy="16" r="3" fill="#e5483a"/></svg>
+      <span>Karlsruher Freaks <small>EST. 2001</small></span>
+    </a>
+    <nav id="main-nav" aria-label="Hauptnavigation">
+      <a href="#spiele">Spiele</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#discord">Discord</a>
+      <a href="#mitglieder">Mitgliederbereich</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn btn-ghost" type="button" data-login>Login</button>
+      <button class="menu-btn" type="button" id="menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="main-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="banner">
+    <img src="banner.jpg" width="1920" height="823" fetchpriority="high" decoding="async" alt="Fünf Gamer mit Headsets blicken auf ein hell erleuchtetes Schloss, von dessen Turm sich goldene Lichtstrahlen wie ein Fächer über den Nachthimmel ziehen. Darüber schweben Controller, Tastatur, Headset und Smartphone.">
+    <div class="banner-title" aria-hidden="true">
+      <p class="bt-name"><span>Karlsruher</span> <b>Freaks</b></p>
+      <p class="bt-tag">Multigaming · seit 2001 · PC · PS5 · Xbox · Mobile</p>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Multigaming-Community aus Karlsruhe</p>
+        <h1>Karlsruher Freaks.<br>Gaming seit <em>2001</em>.</h1>
+        <p class="lead">Ein Clan, alle Spiele, jede Plattform. Ob Call of Duty, Battlefield 6, World of Warcraft oder GTA 6, ob PC, PS5, Xbox oder Handy: Bei den Karlsruher Freaks findest du immer eine Runde.</p>
+        <div class="cta">
+          <a class="btn btn-discord" href="#discord" data-discord>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.3 5.3A17 17 0 0 0 15 4l-.5 1a15.800 15.800 0 0 0-5 0L9 4a17 17 0 0 0-4.300 1.300C2 9.400 1.300 13.300 1.600 17.200A17.200 17.200 0 0 0 6.900 20l1.100-1.800a11 11 0 0 1-1.800-.9l.4-.3a12.200 12.200 0 0 0 10.800 0l.4.3c-.6.4-1.200.7-1.800.9L17.100 20a17.200 17.200 0 0 0 5.300-2.800c.4-4.500-.7-8.400-3.100-11.900ZM8.500 14.800c-1 0-1.900-1-1.900-2.200s.8-2.200 1.900-2.200 1.900 1 1.900 2.200-.8 2.200-1.900 2.200Zm7 0c-1 0-1.900-1-1.900-2.200s.8-2.200 1.900-2.200 1.900 1 1.900 2.200-.8 2.200-1.900 2.200Z"/></svg>
+            Discord beitreten
+          </a>
+          <button class="btn btn-ghost" type="button" data-login>Mitglieder-Login</button>
+        </div>
+        <ul class="facts">
+          <li><b>2001</b>gegründet</li>
+          <li><b id="years">25</b>Jahre Community</li>
+          <li><b>4</b>Plattformen</li>
+          <li><b>24/7</b>Discord online</li>
+        </ul>
+      </div>
+      <figure class="fan" aria-label="Stilisierter Karlsruher Fächer als Radar">
+        <svg viewBox="0 0 400 400" id="fan" role="img" aria-hidden="true"></svg>
+        <figcaption>49.0135° N, 8.4044° E<br>Schlossturm · 32 Strahlen</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="platforms" aria-label="Plattformen">
+    <div class="wrap">
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.500"/><path d="M8 20h8M12 16v4"/></svg>PC</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 8h10a4 4 0 0 1 4 4l-1 5a2 2 0 0 1-3.500 1L14 15h-4l-2.500 3A2 2 0 0 1 4 17l-1-5a4 4 0 0 1 4-4Z"/><path d="M8 11v2M7 12h2M16 12h.01"/></svg>PS5</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M7 8h10a4 4 0 0 1 4 4l-1 5a2 2 0 0 1-3.500 1L14 15h-4l-2.500 3A2 2 0 0 1 4 17l-1-5a4 4 0 0 1 4-4Z"/><path d="M8 11v2M7 12h2M16 12h.01"/></svg>Xbox</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg>Mobile</li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="spiele">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Multigaming</p>
+        <h2>Ein Clan. Alle Spiele.</h2>
+        <p class="lead">Wir legen uns nicht auf einen Titel fest. Für jedes Spiel gibt es eigene Discord-Kanäle, feste Squads und Leute, die gerade online sind.</p>
+      </div>
+      <div class="games">
+        <article class="game" style="--c:#e5483a">
+          <img class="art" src="shooter.jpg" width="960" height="537" loading="lazy" alt="Squad in taktischer Ausrüstung rückt nachts durch eine zerstörte Stadt vor">
+          <span class="genre">Shooter</span>
+          <h3>Call of Duty</h3>
+          <p>Multiplayer, Warzone und Zombies. Squads für schnelle Runden und lange Abende.</p>
+          <div class="pf"><span>PC</span><span>PS5</span><span>Xbox</span></div>
+        </article>
+        <article class="game" style="--c:#f6c21c">
+          <img class="art" src="battle.jpg" width="960" height="537" loading="lazy" alt="Kampfpanzer und zwei Jets auf einem Schlachtfeld bei Sonnenuntergang">
+          <span class="genre">Shooter</span>
+          <h3>Battlefield 6</h3>
+          <p>Große Schlachten mit Panzern, Jets und einem Squad, das zusammenbleibt.</p>
+          <div class="pf"><span>PC</span><span>PS5</span><span>Xbox</span></div>
+        </article>
+        <article class="game" style="--c:#5865f2">
+          <svg class="art" viewBox="0 0 320 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="a3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#252a6e"/><stop offset="1" stop-color="#14131f"/></linearGradient></defs>
+            <rect width="320" height="160" fill="url(#a3)"/>
+            <circle cx="244" cy="44" r="24" fill="#dfe2ff"/><circle cx="235" cy="38" r="22" fill="#252a6e" opacity=".55"/>
+            <g fill="#f1eee6"><circle cx="40" cy="26" r="1.2"/><circle cx="84" cy="48" r="1"/><circle cx="130" cy="20" r="1.3"/><circle cx="196" cy="30" r="1"/><circle cx="290" cy="84" r="1.2"/><circle cx="20" cy="74" r="1"/></g>
+            <path d="M0 136 50 96l34 26 40-44 44 40 46-30 50 34 56-28v66H0Z" fill="#1d1f4a"/>
+            <path d="M104 160V98l13-26 13 26v22h18V82l16-32 16 32v38h18v-18l12-24 12 24v58Z" fill="#0e0d16"/>
+            <g fill="#f6c21c"><rect x="114" y="106" width="5" height="9"/><rect x="161" y="92" width="6" height="11"/><rect x="161" y="120" width="6" height="11"/><rect x="207" y="112" width="5" height="9"/></g>
+          </svg>
+          <span class="genre">MMORPG</span>
+          <h3>World of Warcraft</h3>
+          <p>Dungeons, Raids und gemeinsames Leveln. Auch für Rückkehrer von damals.</p>
+          <div class="pf"><span>PC</span></div>
+        </article>
+        <article class="game" style="--c:#3fcf8e">
+          <img class="art" src="city.jpg" width="960" height="537" loading="lazy" alt="Sportwagen auf nasser Küstenstraße vor einer leuchtenden Skyline bei Nacht">
+          <span class="genre">Open World</span>
+          <h3>GTA 6</h3>
+          <p>Frisch erschienen. Wir erkunden die Spielwelt gemeinsam und sind bereit, sobald der Online-Modus startet.</p>
+          <div class="pf"><span>PS5</span><span>Xbox</span></div>
+        </article>
+        <article class="game" style="--c:#c77dff">
+          <svg class="art" viewBox="0 0 320 160" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs><linearGradient id="a5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a2a6e"/><stop offset="1" stop-color="#14131f"/></linearGradient></defs>
+            <rect width="320" height="160" fill="url(#a5)"/>
+            <circle cx="60" cy="30" r="46" fill="#c77dff" opacity=".14"/>
+            <rect x="62" y="36" width="196" height="92" rx="14" fill="#0e0d16" stroke="#c77dff" stroke-width="1.6"/>
+            <rect x="74" y="46" width="172" height="72" rx="6" fill="#231a36"/>
+            <path d="M74 104l34-24 26 16 30-28 36 26 46-18v40a6 6 0 0 1-6 6H80a6 6 0 0 1-6-6Z" fill="#3a2a58"/>
+            <circle cx="216" cy="62" r="7" fill="#f6c21c"/>
+            <g fill="none" stroke="#f1eee6" stroke-width="1.6" opacity=".85"><circle cx="100" cy="98" r="11"/><circle cx="222" cy="100" r="6"/><circle cx="236" cy="88" r="6"/></g>
+            <circle cx="100" cy="98" r="4" fill="#f1eee6"/>
+          </svg>
+          <span class="genre">Unterwegs</span>
+          <h3>Mobile Games</h3>
+          <p>Eine Runde in der Pause oder auf dem Sofa. Im Discord verabreden wir uns auch fürs Handy.</p>
+          <div class="pf"><span>iOS</span><span>Android</span></div>
+        </article>
+        <article class="game open">
+          <span class="genre">Und mehr</span>
+          <h3>Dein Spiel fehlt?</h3>
+          <p>Bring es mit. Sobald sich ein paar Mitspieler finden, bekommt es einen eigenen Kanal.</p>
+          <a href="#discord">Im Discord vorschlagen</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="ueber-uns">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Über uns</p>
+        <h2>Ein Clan aus der Fächerstadt.</h2>
+        <p class="lead">Gestartet 2001 als Gaming-Clan in Karlsruhe, heute eine offene Multigaming-Community für alle, die lieber gemeinsam als allein spielen. Ohne Leistungsdruck, mit Stammtisch-Gefühl.</p>
+      </div>
+      <figure class="thennow">
+        <svg viewBox="0 0 800 250" role="img" aria-label="Illustration: Röhrenmonitor mit Tower-PC von 2001 neben einem heutigen Setup mit Flachbildschirm, Headset, Controller und Handy">
+          <rect width="800" height="250" fill="#1c1b2b"/>
+          <rect y="206" width="800" height="44" fill="#17161f"/>
+          <path d="M400 20v210" stroke="#27253a" stroke-width="1.5" stroke-dasharray="5 7"/>
+          <g fill="none" stroke="#a39fb5" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+            <rect x="118" y="62" width="138" height="112" rx="10"/><rect x="132" y="74" width="110" height="80" rx="14"/>
+            <path d="M160 174l-10 32h74l-10-32"/>
+            <rect x="282" y="70" width="52" height="136" rx="4"/><path d="M292 86h32M292 98h32"/><circle cx="308" cy="186" r="5"/>
+            <rect x="60" y="192" width="46" height="14" rx="6"/>
+          </g>
+          <g font-family="IBM Plex Mono, monospace" fill="#3fcf8e" font-size="12"><text x="142" y="98">C:\&gt; freaks.exe</text><text x="142" y="116">connecting…</text><text x="142" y="134">ping 120 ms_</text></g>
+          <g fill="none" stroke="#f1eee6" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+            <rect x="462" y="52" width="212" height="118" rx="5"/><path d="M568 170v24M530 206h76"/>
+            <path d="M700 150a26 26 0 0 1 52 0v26"/><rect x="694" y="150" width="12" height="28" rx="5"/><rect x="746" y="150" width="12" height="28" rx="5"/>
+            <rect x="424" y="140" width="26" height="50" rx="5"/>
+          </g>
+          <path d="M464 54h208v114H464Z" fill="#27253a"/>
+          <g stroke="#f6c21c" stroke-width="2" stroke-linecap="round"><path d="M568 110 520 162M568 110l-24 54M568 110v56M568 110l24 54M568 110l48 52"/></g>
+          <circle cx="568" cy="110" r="7" fill="#e5483a"/>
+          <path d="M612 196h42a14 14 0 0 1 14 14l-3 10a6 6 0 0 1-11 2l-6-10h-30l-6 10a6 6 0 0 1-11-2l-3-10a14 14 0 0 1 14-14Z" fill="#1c1b2b" stroke="#f1eee6" stroke-width="2.2" stroke-linejoin="round"/>
+          <g font-family="Bricolage Grotesque, Arial, sans-serif" font-weight="800" font-size="30"><text x="60" y="48" fill="#a39fb5">2001</text><text x="424" y="42" fill="#f6c21c">HEUTE</text></g>
+        </svg>
+        <figcaption>Damals Röhrenmonitor und Tower-PC, heute jede Plattform. Die Freaks sind dieselben geblieben.</figcaption>
+      </figure>
+      <div class="timeline">
+        <div><b>2001</b><p>Gründung der Karlsruher Freaks und Start von karlsruher-freaks.de.</p></div>
+        <div><b>Dazwischen</b><p>Platz für eure Geschichte: alte Screenshots, Ergebnisse und Anekdoten aus dem Archiv.</p></div>
+        <div class="now"><b id="now-year">2026</b><p>Neustart. Neue Homepage, eigener Discord-Server, alte und neue Mitglieder.</p></div>
+      </div>
+      <div class="values">
+        <article><span class="num">01</span><h3>Zusammen spielen</h3><p>Feste Spieleabende und spontane Runden. Wer online ist, findet im Discord immer jemanden zum Mitspielen.</p></article>
+        <article><span class="num">02</span><h3>Karlsruhe im Namen</h3><p>Unsere Wurzeln liegen in der Region. Willkommen ist trotzdem jeder, egal von wo er sich einloggt.</p></article>
+        <article><span class="num">03</span><h3>Fair und erwachsen</h3><p>Respektvoller Umgang, kein Gebrüll im Voice-Chat. Der Spaß am Spiel zählt mehr als die Statistik.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="discord" class="discord">
+    <div class="wrap">
+      <div>
+        <div class="head" style="margin-bottom:0">
+          <p class="eyebrow">Discord</p>
+          <h2>Unser Server ist das Clanheim.</h2>
+          <p class="lead">Voice-Channels für jede Runde, Ankündigungen für Events und ein Archiv-Kanal für die Geschichten von früher.</p>
+        </div>
+        <ol class="steps">
+          <li><div><strong>Server beitreten</strong><span>Ein Klick auf den Einladungslink genügt.</span></div></li>
+          <li><div><strong>Kurz vorstellen</strong><span>Sag im Willkommens-Kanal, was du spielst.</span></div></li>
+          <li><div><strong>Mitspielen</strong><span>Rolle abholen, in den Voice-Channel springen, loslegen.</span></div></li>
+        </ol>
+        <a class="btn btn-discord" href="#discord" data-discord>Discord beitreten</a>
+      </div>
+
+      <aside class="widget" aria-label="Discord-Server Karlsruher Freaks">
+        <header><strong>Karlsruher Freaks</strong><span id="w-count">Beispielansicht</span></header>
+        <p class="tag" id="w-tag">Vorschau · Live-Daten folgen mit Server-ID</p>
+        <h4>Kanäle</h4>
+        <ul id="w-channels">
+          <li class="ch">willkommen</li>
+          <li class="ch">ankündigungen</li>
+          <li class="ch">spielersuche</li>
+          <li class="ch">archiv-seit-2001</li>
+        </ul>
+        <h4 id="w-online-h">Online</h4>
+        <ul id="w-members">
+          <li><i></i>Mitglied 1<em>Beispiel</em></li>
+          <li><i></i>Mitglied 2<em>Beispiel</em></li>
+          <li><i></i>Mitglied 3<em>Beispiel</em></li>
+        </ul>
+        <footer>
+          <a class="btn btn-discord" href="#discord" data-discord>Server öffnen</a>
+          <small id="w-hint">Einladungslink wird noch hinterlegt.</small>
+        </footer>
+      </aside>
+    </div>
+  </section>
+
+  <section id="mitglieder">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Mitgliederbereich</p>
+        <h2>Nur für Freaks.</h2>
+        <p class="lead">Nach dem Login mit deinem Discord-Konto siehst du, was nicht ins offene Netz gehört.</p>
+      </div>
+      <div class="members-grid">
+        <article class="lock">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <h3>Mitgliederliste</h3><p>Profile, Nicknames und Lieblingsspiele aller Freaks.</p><span class="state">Login nötig</span>
+        </article>
+        <article class="lock">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <h3>Event-Kalender</h3><p>Spieleabende, Turniere und Treffen in Karlsruhe.</p><span class="state">Login nötig</span>
+        </article>
+        <article class="lock">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <h3>Server-Zugänge</h3><p>Adressen und Passwörter unserer Gameserver.</p><span class="state">Login nötig</span>
+        </article>
+        <article class="lock">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+          <h3>Clan-Archiv</h3><p>Fotos, Screenshots und Ergebnisse aus über zwei Jahrzehnten.</p><span class="state">Login nötig</span>
+        </article>
+      </div>
+      <div class="members-cta">
+        <button class="btn btn-primary" type="button" data-login>Jetzt einloggen</button>
+        <small>Noch kein Mitglied? Tritt zuerst dem Discord bei.</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>Lust auf eine Runde?</h2>
+      <p>Ob du 2001 schon dabei warst oder heute zum ersten Mal von uns hörst: Im Discord ist ein Platz für dich frei.</p>
+      <a class="btn btn-primary" href="#discord" data-discord>Discord beitreten</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© <span id="copy-year">2026</span> Karlsruher Freaks · karlsruher-freaks.de</span>
+    <nav aria-label="Rechtliches"><a href="#top">Impressum</a><a href="#top">Datenschutz</a></nav>
+  </div>
+</footer>
+
+<div class="modal" id="login" role="dialog" aria-modal="true" aria-labelledby="login-title">
+  <div class="dialog">
+    <button class="close" type="button" aria-label="Schließen" data-close>×</button>
+    <h3 id="login-title">Mitglieder-Login</h3>
+    <p>Melde dich mit deinem Discord-Konto an. Deine Server-Rolle entscheidet, was du siehst.</p>
+    <button class="btn btn-discord" type="button" id="oauth">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.3 5.3A17 17 0 0 0 15 4l-.5 1a15.800 15.800 0 0 0-5 0L9 4a17 17 0 0 0-4.300 1.300C2 9.400 1.300 13.300 1.600 17.200A17.200 17.200 0 0 0 6.900 20l1.100-1.800a11 11 0 0 1-1.800-.9l.4-.3a12.200 12.200 0 0 0 10.800 0l.4.3c-.6.4-1.200.7-1.800.9L17.100 20a17.200 17.200 0 0 0 5.300-2.800c.4-4.500-.7-8.400-3.100-11.900ZM8.500 14.800c-1 0-1.900-1-1.900-2.200s.8-2.200 1.900-2.200 1.900 1 1.900 2.200-.8 2.200-1.900 2.200Zm7 0c-1 0-1.900-1-1.900-2.200s.8-2.200 1.900-2.200 1.900 1 1.900 2.200-.8 2.200-1.900 2.200Z"/></svg>
+      Mit Discord anmelden
+    </button>
+    <div class="or">oder</div>
+    <form id="login-form" novalidate>
+      <div class="field"><label for="login-user">Benutzername oder E-Mail</label><input id="login-user" type="text" autocomplete="username"></div>
+      <div class="field"><label for="login-pass">Passwort</label><input id="login-pass" type="password" autocomplete="current-password"></div>
+      <button class="btn btn-primary" type="submit">Einloggen</button>
+    </form>
+    <p class="notice" id="login-notice" role="status"></p>
+  </div>
+</div>
+
+<script>
+/* ---------- Einstellungen: hier eure Daten eintragen ---------- */
+const CONFIG = {
+  discordInvite: "",     // z. B. "https://discord.gg/abcdef"
+  discordServerId: "",   // Server-ID; im Discord unter Servereinstellungen > Widget aktivieren
+  oauthLoginUrl: ""      // Adresse eures Login-Endpunkts, z. B. "/auth/discord"
+};
+
+/* Jahreszahlen */
+const year = new Date().getFullYear();
+document.getElementById("years").textContent = year - 2001;
+document.getElementById("now-year").textContent = year;
+document.getElementById("copy-year").textContent = year;
+
+/* Karlsruher Fächer: 32 Strahlen vom Schlossturm, die 9 südlichen bilden die Stadt */
+(function drawFan() {
+  const svg = document.getElementById("fan"), c = 200, R = 170;
+  let s = '<defs><linearGradient id="sw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6c21c" stop-opacity=".35"/><stop offset="1" stop-color="#f6c21c" stop-opacity="0"/></linearGradient></defs>';
+  [60, 115, 170].forEach(r => { s += `<circle cx="${c}" cy="${c}" r="${r}" fill="none" stroke="#27253a" stroke-width="1.2"/>`; });
+  for (let i = 0; i < 32; i++) {
+    const a = (i / 32) * Math.PI * 2 + Math.PI / 2;            // i = 0 zeigt nach Süden
+    const south = i <= 4 || i >= 28;
+    const x = c + Math.cos(a) * R, y = c + Math.sin(a) * R;
+    s += `<line x1="${c}" y1="${c}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="${south ? "#f6c21c" : "#34314b"}" stroke-width="${south ? 2.2 : 1}" stroke-linecap="round"/>`;
+    if (south) s += `<circle cx="${(c + Math.cos(a) * (70 + (i * 37) % 90)).toFixed(1)}" cy="${(c + Math.sin(a) * (70 + (i * 37) % 90)).toFixed(1)}" r="3.5" fill="#f1eee6"/>`;
+  }
+  s += `<path class="sweep" d="M${c} ${c} L${c} ${c - R} A${R} ${R} 0 0 1 ${c + R} ${c} Z" fill="url(#sw)"/>`;
+  s += `<circle cx="${c}" cy="${c}" r="9" fill="#e5483a"/><circle cx="${c}" cy="${c}" r="16" fill="none" stroke="#e5483a" stroke-width="1.5" opacity=".5"/>`;
+  svg.innerHTML = s;
+})();
+
+/* Noch fehlende Kartenbilder (Fantasy, Mobile): werden nachgeladen, wenn erreichbar; sonst bleibt das gezeichnete Motiv. */
+const IMG_BASE = "https://d8j0ntlcm91z4.cloudfront.net/user_3Lvxmws66QolzFK0shzLPLkOnyx/";
+const EXTRA = [
+  [IMG_BASE + "hf_20261122_212850_8eb18ed5-b4d5-45f2-9684-d3954e0e53ba.jpeg", "Heldengruppe vor einer Burg im Mondlicht"],
+  [IMG_BASE + "hf_20261122_212849_e47ad40c-ba31-479e-9d0c-c892551840a3.jpeg", "Hände mit Smartphone im Spiel"]
+];
+document.querySelectorAll(".games .game svg.art").forEach((svg, i) => {
+  if (!EXTRA[i]) return;
+  const img = new Image();
+  img.className = "art"; img.alt = EXTRA[i][1];
+  img.onload = () => svg.replaceWith(img);
+  img.src = EXTRA[i][0];
+});
+
+/* Discord-Links */
+if (CONFIG.discordInvite) {
+  document.querySelectorAll("[data-discord]").forEach(a => { a.href = CONFIG.discordInvite; a.rel = "noopener"; });
+  document.getElementById("w-hint").textContent = "Öffnet Discord in einem neuen Fenster.";
+}
+
+/* Discord-Widget: lädt Live-Daten, sobald eine Server-ID eingetragen ist */
+if (CONFIG.discordServerId) {
+  fetch(`https://discord.com/api/guilds/${CONFIG.discordServerId}/widget.json`)
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(d => {
+      const esc = t => String(t).replace(/[&<>"]/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[m]));
+      document.getElementById("w-count").textContent = d.presence_count + " online";
+      document.getElementById("w-tag").textContent = "Live vom Server";
+      if (d.channels && d.channels.length)
+        document.getElementById("w-channels").innerHTML = d.channels.slice(0, 5).map(ch => `<li class="ch">${esc(ch.name)}</li>`).join("");
+      document.getElementById("w-members").innerHTML = (d.members || []).slice(0, 8)
+        .map(m => `<li><i></i>${esc(m.username)}${m.game ? `<em>${esc(m.game.name)}</em>` : ""}</li>`).join("") || "<li>Gerade niemand online</li>";
+      if (d.instant_invite && !CONFIG.discordInvite)
+        document.querySelectorAll("[data-discord]").forEach(a => { a.href = d.instant_invite; });
+    })
+    .catch(() => { document.getElementById("w-tag").textContent = "Live-Daten nicht erreichbar · Beispielansicht"; });
+}
+
+/* Mobile-Menü */
+const menuBtn = document.getElementById("menu-btn"), mainNav = document.getElementById("main-nav");
+function setMenu(open) { mainNav.classList.toggle("open", open); menuBtn.setAttribute("aria-expanded", open); menuBtn.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen"); }
+menuBtn.addEventListener("click", () => setMenu(!mainNav.classList.contains("open")));
+mainNav.addEventListener("click", e => { if (e.target.tagName === "A") setMenu(false); });
+
+/* Login-Dialog */
+const modal = document.getElementById("login"), notice = document.getElementById("login-notice");
+let lastFocus = null;
+function openLogin(e) { lastFocus = e.currentTarget; notice.classList.remove("show"); modal.classList.add("open"); document.getElementById("oauth").focus(); }
+function closeLogin() { modal.classList.remove("open"); if (lastFocus) lastFocus.focus(); }
+function say(text) { notice.textContent = text; notice.classList.add("show"); }
+document.querySelectorAll("[data-login]").forEach(b => b.addEventListener("click", openLogin));
+modal.addEventListener("click", e => { if (e.target === modal || e.target.hasAttribute("data-close")) closeLogin(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeLogin(); });
+document.getElementById("oauth").addEventListener("click", () => {
+  if (CONFIG.oauthLoginUrl) { location.href = CONFIG.oauthLoginUrl; return; }
+  say("Vorschau: Der Discord-Login wird aktiv, sobald die Seite auf eurem Server läuft und mit der Discord-Anwendung verbunden ist.");
+});
+document.getElementById("login-form").addEventListener("submit", e => {
+  e.preventDefault();
+  const u = document.getElementById("login-user").value.trim(), p = document.getElementById("login-pass").value;
+  if (!u || !p) { say("Bitte Benutzername und Passwort eingeben."); return; }
+  say("Vorschau: Es wurde nichts gesendet. Die Anmeldung funktioniert erst mit einer Mitglieder-Datenbank auf eurem Server.");
+});
+</script>
+</body>
+</html>
