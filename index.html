@@ -507,7 +507,7 @@ footer.site nav { display: flex; gap: 22px; }
       <div class="head">
         <p class="eyebrow">Mitgliederbereich</p>
         <h2>Nur für Freaks.</h2>
-        <p class="lead">Nach dem Login mit deinem Discord-Konto siehst du, was nicht ins offene Netz gehört.</p>
+        <p class="lead">Mit dem Mitglieder-Passwort aus dem Discord siehst du Vereinsinfos, Regeln, Termine und Server-Zugänge.</p>
       </div>
       <div class="members-grid">
         <article class="lock">
@@ -650,7 +650,7 @@ let lastFocus = null;
 function openLogin(e) { lastFocus = e.currentTarget; notice.classList.remove("show"); modal.classList.add("open"); document.getElementById("oauth").focus(); }
 function closeLogin() { modal.classList.remove("open"); if (lastFocus) lastFocus.focus(); }
 function say(text) { notice.textContent = text; notice.classList.add("show"); }
-document.querySelectorAll("[data-login]").forEach(b => b.addEventListener("click", openLogin));
+document.querySelectorAll("[data-login]").forEach(b => b.addEventListener("click", () => { location.href = "/intern/"; }));
 modal.addEventListener("click", e => { if (e.target === modal || e.target.hasAttribute("data-close")) closeLogin(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && modal.classList.contains("open")) closeLogin(); });
 document.getElementById("oauth").addEventListener("click", () => {

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /intern/
 
 Sitemap: https://karlsruher-freaks.de/sitemap.xml
